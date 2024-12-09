@@ -1,7 +1,12 @@
 {
-  "name": "site",
+  "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "email": "winter@arsn.cc",
+    "name": "vWinter"
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
