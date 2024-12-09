@@ -2,28 +2,19 @@
 
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { Button } from "@/components/ui/button"
 import React from "react";
 
 export function Introduction() {
-    const scrollToSkills = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
-        const skillsSection = document.getElementById('skills')
-        if (skillsSection) {
-            skillsSection.scrollIntoView({ behavior: 'smooth' })
-        }
-    }
-
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-        >
-            <div className="h-screen flex items-center justify-center bg-gradient-to-b from-background to-background/80">
+        <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-b from-background to-background/80 py-16">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+            >
                 <section id="about">
                     <div className="text-center">
-                        <div className="text-4xl md:text-6xl font-bold mb-4">
+                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                             <motion.h1
                                 initial={{ y: -50, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -37,10 +28,10 @@ export function Introduction() {
                             animate={{ y: 0 }}
                             transition={{ type: 'spring', stiffness: 100 }}
                         >
-                            <div className="text-xl md:text-2xl mb-8">
+                            <div className="text-lg sm:text-xl md:text-2xl mb-8">
                                 <TypeAnimation
                                     sequence={[
-                                        'Hi, I\'m vWinter',
+                                        'Hello, I\'m vWinter',
                                         3000,
                                         'I\'m a passionate developer',
                                         3000,
@@ -58,25 +49,10 @@ export function Introduction() {
                                 />
                             </div>
                         </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.5 }}
-                        >
-                            <div>
-                                <Button
-                                    onClick={scrollToSkills}
-                                    size="lg"
-                                    className="rounded-full"
-                                >
-                                    Explore My Skills
-                                </Button>
-                            </div>
-                        </motion.div>
                     </div>
                 </section>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }
 

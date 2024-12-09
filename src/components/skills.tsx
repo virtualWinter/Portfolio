@@ -27,16 +27,16 @@ const skillCategories = [
 
 export function Skills() {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-        >
-            <div className="flex items-center justify-center bg-gradient-to-b from-background/80 to-background py-20">
-                <section id="skills" className="w-full">
-                    <div className="container mx-auto px-6 md:px-12 lg:px-24">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Skills & Expertise</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-b from-background/80 to-background">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+            >
+                <section id="skills" className="w-full py-16 sm:py-24">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">Skills & Expertise</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                             {skillCategories.map((category, categoryIndex) => (
                                 <motion.div
                                     key={category.name}
@@ -45,7 +45,7 @@ export function Skills() {
                                     transition={{ delay: categoryIndex * 0.2 }}
                                 >
                                     <Card className="h-full">
-                                        <CardContent className="p-6">
+                                        <CardContent className="p-4 sm:p-6">
                                             <h3 className="text-xl font-semibold mb-4">{category.name}</h3>
                                             <div className="flex flex-wrap gap-2">
                                                 {category.skills.map((skill) => (
@@ -67,8 +67,8 @@ export function Skills() {
                         </div>
                     </div>
                 </section>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }
 

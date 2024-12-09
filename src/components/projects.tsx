@@ -18,16 +18,16 @@ const projects = [
 
 export function Projects() {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-        >
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-background/80 py-12">
-                <section id="projects">
-                    <div className="container mx-auto px-6 md:px-12 lg:px-24">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Projects</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-b from-background to-background/80">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+            >
+                <section id="projects" className="w-full py-16 sm:py-24">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">Projects</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                             {projects.map((project, index) => (
                                 <motion.div
                                     key={project.title}
@@ -44,7 +44,7 @@ export function Projects() {
                                         <CardHeader>
                                             <CardTitle>{project.title}</CardTitle>
                                         </CardHeader>
-                                        <CardContent>
+                                        <CardContent className="p-4 sm:p-6">
                                             <p className="text-muted-foreground mb-4">{project.description}</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {project.tags.map((tag) => (
@@ -60,8 +60,8 @@ export function Projects() {
                         </div>
                     </div>
                 </section>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }
 
