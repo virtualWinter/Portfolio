@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import {motion} from 'framer-motion'
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
+import {Badge} from "@/components/ui/badge"
 
 const projects = [
     {
@@ -18,21 +18,23 @@ const projects = [
 
 export function Projects() {
     return (
-        <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-b from-background to-background/80">
+        <div
+            id="projects"
+            className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-b from-background to-background/80">
             <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: 0.4, duration: 0.8}}
             >
-                <section id="projects" className="w-full py-16 sm:py-24">
+                <section className="w-full py-16 sm:py-24">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">Projects</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                             {projects.map((project, index) => (
                                 <motion.div
                                     key={project.title}
-                                    initial={{ scale: 0.9, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
+                                    initial={{scale: 0.9, opacity: 0}}
+                                    animate={{scale: 1, opacity: 1}}
                                     transition={{
                                         delay: index * 0.1,
                                         duration: 0.5,
