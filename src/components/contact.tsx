@@ -40,7 +40,7 @@ export function Contact() {
                                                 </div>
                                                 <div className="flex items-center space-x-3">
                                                     <MessageSquare className="text-primary" />
-                                                    <span>Discord: @</span>
+                                                    <span>Discord: @vwinter</span>
                                                 </div>
                                             </div>
                                         </CardContent>
